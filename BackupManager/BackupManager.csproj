@@ -41,6 +41,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BackupDefinition.cs" />
+    <Compile Include="BackupFileFinder.cs" />
+    <Compile Include="BackupFileInfo.cs" />
     <Compile Include="BackupIntervalDefinition.cs" />
     <Compile Include="FileBackupManager.cs" />
     <Compile Include="Interval.cs" />
