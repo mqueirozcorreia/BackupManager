@@ -44,6 +44,7 @@
     <Compile Include="BackupFileFinder.cs" />
     <Compile Include="BackupFileInfo.cs" />
     <Compile Include="BackupIntervalDefinition.cs" />
+    <Compile Include="BackupIntervalManager.cs" />
     <Compile Include="FileBackupManager.cs" />
     <Compile Include="Interval.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

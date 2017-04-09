@@ -10,18 +10,18 @@ namespace BackupManager
     {
         public BackupDefinition()
         {
-            IntervalList = new List<BackupIntervalDefinition>();
+            ItemList = new List<BackupIntervalDefinition>();
         }
 
-        public List<BackupIntervalDefinition> IntervalList { get; set; }
+        public List<BackupIntervalDefinition> ItemList { get; set; }
 
         public bool IsOverriding()
         {
-            for(int i=0; i<IntervalList.Count;i++)
+            for(int i=0; i<ItemList.Count;i++)
             {
-                for (int j = i + 1; j < IntervalList.Count; j++)
+                for (int j = i + 1; j < ItemList.Count; j++)
                 {
-                    if (IntervalList[i].IsOverriding(IntervalList[j]))
+                    if (ItemList[i].IsOverriding(ItemList[j]))
                         return true;
                 }
             }

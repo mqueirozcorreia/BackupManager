@@ -60,6 +60,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BackupFileFinderTest.cs" />
+    <Compile Include="BackupIntervalManagerTest.cs" />
     <Compile Include="FileBackupManagerTest.cs" />
     <Compile Include="IntervalTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

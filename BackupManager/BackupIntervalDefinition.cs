@@ -11,6 +11,21 @@ namespace BackupManager
         public BackupIntervalEnum IntervalType { get; set; }
         public List<Interval> IntervalList { get; set; }
 
+        public DateTime? Start
+        {
+            get
+            {
+                return IntervalList?[IntervalList.Count - 1].Start;
+            }
+        }
+        public DateTime? End
+        { 
+            get
+            {
+                return IntervalList?[0].End;
+            }
+        }
+
         internal bool IsOverriding(BackupIntervalDefinition backupIntervalDefinition)
         {
             for(int i=0;i<IntervalList.Count;i++)
@@ -24,11 +39,18 @@ namespace BackupManager
 
             return false;
         }
+
+        public override string ToString()
+        {
+            return $"{this.IntervalType} {this.Start} {this.End}";
+        }
     }
 
     public enum BackupIntervalEnum
     {
         Daily = 10,
-        Weekly = 20
+        Weekly = 20,
+        Monthly = 30,
+        Yearly = 40
     }
 }
